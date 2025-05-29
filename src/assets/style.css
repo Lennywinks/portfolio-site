@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --color-surface-lowest: #0F0D13;
+    --color-surface-low: #1D1B20;
+    --color-surface: #211F26;
+    --color-surface-high: #2B2930;
+    --color-surface-highest: #36343B;
+
+    --color-on-surface: #E6E0E9;
+    --color-on-surface-variant: #CAC4D0;
+
+    --color-primary: #03DAC6;
+    --color-primary-dark: #02a395;
+    --color-on-primary: #000000;
+    --color-primary-container: #4F378B;
+    --color-on-primary-container: #EADDFF;
+    --color-secondary: #D0BCFF;
+    --color-on-secondary: #381E72;
+
+    --font-inter: "Inter", sans-serif;
+}
+
+body {
+    background-color: #0F0D13
+}
+
+/* Homepage animations */
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop{
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes popIn {
+    0% {opacity: 0; transform: scale(0.5);}
+    100% {opacity: 1; transform: scale(1);}
+}
+
+
+/* Home Animations */
+@utility slide-in-who-am-i {
+    animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+@utility slide-in-picture {
+    animation: slideInFromTop 0.5s ease-out forwards;
+    animation-delay:  0.1s;
+    animation-fill-mode: backwards;
+}
+
+@utility slide-in-education {
+    animation: slideInFromRight 0.5s ease-out forwards;
+    animation-delay:  0.15s;
+    animation-fill-mode: backwards;
+}
+
+@utility slide-in-technologies {
+    animation: slideInFromBottom 0.5s ease-out forwards;
+    animation-delay:  0.2s;
+    animation-fill-mode: backwards;
+}
+
+@utility slide-in-quote {
+    animation: slideInFromRight 0.5s ease-out forwards;
+    animation-delay:  0.4s;
+    animation-fill-mode: backwards;
+}
+
+@utility slide-in-title{
+    animation: slideInFromLeft 0.5s ease-out forwards;
+    animation-delay:  0.4s;
+    animation-fill-mode: backwards;
+}
+
+@utility pop-in {
+    animation: popIn 0.4s ease-out forwards;
+    animation-fill-mode: backwards;
+}
+
+/* Projects Page Animations */
+@keyframes slideInFromTopFar{
+    0% {
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@utility slide-in-header {
+    animation: slideInFromLeft 0.3s ease-out forwards;
+    animation-fill-mode: backwards;
+}
+
+@utility slide-in-project-description {
+    animation: slideInFromTopFar 0.5s ease-out forwards;
+    animation-fill-mode: backwards;
+    animation-delay:  0.2s;
+}
+
+/* Contact Page Animations */
+@utility slide-in-mail-box{
+    animation: slideInFromLeft 0.4s ease-out forwards;
+    animation-delay:  0.2s;
+    animation-fill-mode: backwards;
+}
+
+@utility slide-in-github-box{
+    animation: slideInFromTop 0.4s ease-out forwards;
+    animation-delay:  0.25s;
+    animation-fill-mode: backwards;
+}
+
+@utility slide-in-linkedin-box{
+    animation: slideInFromLeft 0.4s ease-out forwards;
+    animation-delay:  0.3s;
+    animation-fill-mode: backwards;
+}
+
+@utility slide-in-contact-form{
+    animation: slideInFromBottom 0.4s ease-out forwards;
+    animation-delay:  0.4s;
+    animation-fill-mode: backwards;
+}
+
