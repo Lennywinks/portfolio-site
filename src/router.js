@@ -9,12 +9,16 @@ const routes = [
     { path: '/', name: 'Home', component: Home },
     { path: '/projects', name: 'Projects', component: Projects },
     { path: '/contact', name: 'Contact', component: Contact },
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
+    { path: '/:pathMatch(.*)*', name: '404 Not Found', component: NotFound }
 ]
 
 const router = createRouter({
     history: createWebHistory(),
     routes,
+})
+
+router.beforeEach((to) => {
+    document.title = 'Lenny-Dev - ' + to.name ?? 'Lenny-Dev'
 })
 
 export default router
