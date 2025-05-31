@@ -9,6 +9,7 @@ const routes = [
     { path: '/', name: 'Home', component: Home },
     { path: '/projects', name: 'Projects', component: Projects },
     { path: '/contact', name: 'Contact', component: Contact },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }
 ]
 
 const router = createRouter({
