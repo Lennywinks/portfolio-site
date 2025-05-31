@@ -13,8 +13,7 @@ import PackageIcon from '@/assets/PackageIcon.vue';
         :icon='PackageIcon'
         description="
           This project was the subject of my bachelor thesis. It leverages machine learning to accurately predict delivery times for E-commerce orders.
-          By analyzing historical shipping data, carrier performance, weekdays, and location patterns, several models were trained to estimate realistic delivery dates.
-          The goal is to improve customer satisfaction and optimize logistics planning."
+          By analyzing historical shipping data, carrier performance, weekdays, and location patterns, several models were trained to estimate realistic delivery dates."
         :technologies='["Python", "Pandas", "scikit-learn", "XGBoost"]'
     />
 
